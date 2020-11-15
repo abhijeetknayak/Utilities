@@ -31,3 +31,28 @@ SELECT COUNT(*) FROM employee;
 
 ## Count of employees who have supervisors
 SELECT COUNT(super_id) FROM employee;
+
+## Count of all female employees born after 1970
+SELECT COUNT(*) FROM employee
+WHERE sex = 'F' AND birth_date > '1970-01-01';
+
+## Find average of all employee salaries
+SELECT AVG(salary) FROM employee;
+
+## Find the sum of all employee salaries
+SELECT SUM(salary) FROM employee;
+
+## Find out how many male and female employees there are
+SELECT COUNT(sex), sex
+FROM employee
+GROUP BY sex;
+
+## Find total sales of each salesman
+SELECT SUM(total_sales), emp_id
+FROM works_with
+GROUP BY emp_id;
+
+## How much money was spent by each client
+SELECT SUM(total_sales), client_id
+FROM works_with
+GROUP BY client_id;
