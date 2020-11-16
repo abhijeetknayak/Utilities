@@ -1,0 +1,10 @@
+Company Data Requirements
+
+1. The company is organized into branches. Each branch has a unique number, name and a particular employee who manages it.
+2. The company makes its money by selling to clients. Each client has a name and a unique number to identify it.
+3. The foundation of the company is its employees. Each employee has a name, birthday, sex, salary and a unique number.
+4. An employee can work for one branch at a time, and each branch will be managed by one of the employees who works there. We'll also keep track of when the current manager started as a manager in that branch.
+5. An employee can act as a supervisor to other employees at the branch, or at other branches. An employee can have at most one supervisor.
+6. A branch may handle a number of clients. A single client may only be handled by one branch at a time.
+7. Employees can work with clients controlled by their branch to sell them stuff. If necessary, multiple employees can work with the same client. We'll want to keep track of how many dollars worth of stuff each employee sells to each client they work with.
+8. Many branches will need to work with suppliers to buy inventory. For each supplier, we'll keep track of their name and thetype of product they're selling the branch. A single supplier may sell products to multiple branches.
