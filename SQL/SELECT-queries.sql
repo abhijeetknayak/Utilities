@@ -56,3 +56,16 @@ GROUP BY emp_id;
 SELECT SUM(total_sales), client_id
 FROM works_with
 GROUP BY client_id;
+
+## WILDCARDS - Similar to Regular Expressions python
+## Suppliers that have 'label' in their names
+SELECT * FROM branch_supplier
+WHERE supplier_name LIKE ('%label%');
+
+## Employees born in July?
+SELECT * FROM employee
+WHERE birth_date LIKE '____-07-__';
+
+## Clients who are schools
+SELECT * FROM client_table
+WHERE client_name LIKE '%school%';
