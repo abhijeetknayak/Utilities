@@ -85,3 +85,19 @@ SELECT MAX(employee.salary) FROM employee;
 SELECT salary FROM employee
 ORDER By salary DESC LIMIT 1, 1;
 
+## Salary, Branch and name of Highest earning employee
+SELECT employee.first_name, employee.last_name, employee.salary, branch.branch_name FROM employee
+JOIN branch ON (branch.branch_id = employee.branch_id)
+WHERE employee.salary IN (
+    SELECT MAX(salary) FROM employee
+);
+
+## Employee name, highest salary for each department
+SELECT employee.first_name, employee.last_name, employee.salary, branch.branch_name FROM employee
+JOIN branch ON (branch.branch_id = employee.branch_id)
+WHERE employee.salary = (
+    SELECT MAX(salary) FROM employee
+    WHERE branch_id = branch.branch_id
+);
+
+SELECT * FROM employee;
