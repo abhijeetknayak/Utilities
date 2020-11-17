@@ -36,5 +36,18 @@ IGNORE 1 ROWS;
 SELECT COUNT(*) FROM complaints
 WHERE complaints.date_received = complaints.date_sent;
 
+## TASK 2 : Extract the complaints received in the state of New York
+SELECT * FROM complaints
+WHERE complaints.state_name = 'NY'
+LIMIT 5;
 
+## TASK 3 : Extract the complaints received in the states of NY and California
+SELECT * FROM complaints
+WHERE complaints.state_name = 'NY' OR complaints.state_name = 'CA'
+LIMIT 10;
+
+## TASK 4 : Extract all rows with the word 'Credit' in the product field
+SELECT * FROM complaints
+WHERE complaints.product_name LIKE '%Credit%'
+LIMIT 10;
 
