@@ -51,3 +51,9 @@ SELECT * FROM complaints
 WHERE complaints.product_name LIKE '%Credit%'
 LIMIT 10;
 
+## TASK 5 : Extract all rows with the word 'Late' in the Issue field
+SELECT * FROM complaints
+WHERE complaints.issue LIKE '%Late%'
+LIMIT 10;
+
+
