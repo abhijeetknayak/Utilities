@@ -1,3 +1,4 @@
+USE giraffe;
 ## Find all employees
 SELECT * FROM employee;
 
@@ -69,3 +70,18 @@ WHERE birth_date LIKE '____-07-__';
 ## Clients who are schools
 SELECT * FROM client_table
 WHERE client_name LIKE '%school%';
+
+## New Tasks
+## Employee with highest salary
+SELECT * FROM employee
+WHERE employee.salary = (
+	SELECT MAX(salary) FROM employee
+);
+
+## Highest Salary
+SELECT MAX(employee.salary) FROM employee;
+
+## Second highest salary
+SELECT salary FROM employee
+ORDER By salary DESC LIMIT 1, 1;
+
