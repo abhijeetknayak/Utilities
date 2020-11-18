@@ -47,5 +47,28 @@ SELECT * FROM console_dates;
 
 ## Data loading into Database complete!
 
+## TASK 1 : What percent of global sales were made in North America
+ALTER TABLE console_games
+ADD COLUMN global_sales double NULL;
+
+UPDATE console_games
+SET global_sales = na_sales + eu_sales + jp_sales + other_sales;
+
+SELECT SUM(na_sales) * 100.0 / sum(global_sales) as NA_Sales_Percentage FROM console_games;
+
+## TASK 2 : Extract a view of the console game titles ordered by platform name in ascending order 
+## and year of release in decending order
+CREATE VIEW game_titles AS
+SELECT game_name FROM console_games
+ORDER BY platform_name ASC, game_year DESC;
+
+SELECT * FROM game_titles;
+
+## TASK 3 : Extract the first four characters of game_titles
+SELECT SUBSTRING(game_name, 1, 4) AS SUB_STRING FROM console_games;
+
+
+
+
 
 
