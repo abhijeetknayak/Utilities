@@ -2,6 +2,7 @@ CREATE DATABASE pets;
 USE pets;
 
 DROP TABLE pet_details;
+DROP TABLE procedure_history;
 
 CREATE TABLE pet_details(
 	PetID VARCHAR(7) PRIMARY KEY,
@@ -42,3 +43,49 @@ LIMIT 5;
 SELECT * FROM pet_details
 LIMIT 5;
 
+CREATE TABLE procedure_details(
+	ProcedureType VARCHAR(20),
+    ProcedureSubCode INT,
+    procedure_desc VARCHAR(25),
+    price INT,
+    PRIMARY KEY(ProcedureType, ProcedureSubCode)
+);
+
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/P9-ProceduresDetails.csv'
+INTO TABLE procedure_details
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+SELECT * FROM procedure_details
+LIMIT 5;
+
+CREATE TABLE procedure_history(
+    pet_id VARCHAR(7),
+    procedure_date DATE,
+    ProcedureType VARCHAR(20),
+    ProcedureSubCode INT,
+    PRIMARY KEY(pet_id, procedure_date, ProcedureType, ProcedureSubCode)
+    #FOREIGN KEY(pet_id) REFERENCES pet_details(PetID) ON DELETE CASCADE,
+    #FOREIGN KEY(ProcedureType, ProcedureSubCode) REFERENCES procedure_details(ProcedureType, ProcedureSubCode) ON DELETE CASCADE
+);
+
+LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/P9-ProceduresHistory.csv'
+INTO TABLE procedure_history
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+## TASK 1 : Extract information about pets and their owners side by side
+SELECT pet_details.pet_name, owner_details.owner_name, owner_details.owner_surname FROM owner_details
+JOIN pet_details ON (pet_details.ownerID = owner_details.ownerID)
+LIMIT 20;
+
+## TASK 2 : Find out which pets from this clinic had procedures performed
+
+
+## TASK 3 : Match up all procedures performed to their descriptions
+
+
+## TASK 4 : Same as above, but only on pets from the clinic in question
