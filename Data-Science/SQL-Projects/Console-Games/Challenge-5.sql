@@ -65,10 +65,39 @@ ORDER BY platform_name ASC, game_year DESC;
 SELECT * FROM game_titles;
 
 ## TASK 3 : Extract the first four characters of game_titles
-SELECT SUBSTRING(game_name, 1, 4) AS SUB_STRING FROM console_games;
+SELECT SUBSTRING(publisher, 1, 4) AS SUB_STRING FROM console_games;
+
+## TASK 4 : Display all console platforms that were released either just before black friday or Christmas
+ 
 
 
+## TASK 5 : Order the game platform by longevity
+SELECT date(NOW());
 
+UPDATE console_dates
+SET discontinued = date(NOW())
+WHERE discontinued = '0000-00-00';  ## Replace empty spaces with the today's date
 
+ALTER TABLE console_dates
+ADD column active_time INT;
 
+UPDATE console_dates
+SET active_time = DATEDIFF(discontinued, first_retail_availability);
+
+SELECT * FROM console_dates
+ORDER BY active_time;
+
+UPDATE console_dates
+SET discontinued = '0000-00-00'
+WHERE discontinued = date(NOW());  ## RESET discontinued dates which were modified
+
+## TASK 6 : Demonstrate how to deal with the game_year column
+ALTER TABLE console_games
+ADD COLUMN converted_date VARCHAR(10);
+
+UPDATE console_games
+SET converted_date = CONVERT(game_year, char);
+
+SELECT CONVERT(converted_date, DATE) FROM console_games
+LIMIT 5;
 
