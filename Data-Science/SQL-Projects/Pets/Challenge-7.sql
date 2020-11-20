@@ -83,9 +83,15 @@ JOIN pet_details ON (pet_details.ownerID = owner_details.ownerID)
 LIMIT 20;
 
 ## TASK 2 : Find out which pets from this clinic had procedures performed
-
+SELECT pet_details.PetID, pet_details.pet_name, pet_details.Kind FROM procedure_history
+LEFT JOIN pet_details ON (pet_details.PetID = procedure_history.pet_id)
+WHERE PetID IS NOT NULL;
 
 ## TASK 3 : Match up all procedures performed to their descriptions
-
+SELECT procedure_history.pet_id, procedure_history.ProcedureType, procedure_history.ProcedureSubCode,
+procedure_details.procedure_desc, procedure_details.price FROM procedure_history
+JOIN procedure_details ON (procedure_history.ProcedureType = procedure_details.ProcedureType
+ AND procedure_history.ProcedureSubCode = procedure_details.ProcedureSubCode)
+LIMIT 20;
 
 ## TASK 4 : Same as above, but only on pets from the clinic in question
