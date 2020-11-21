@@ -95,3 +95,19 @@ JOIN procedure_details ON (procedure_history.ProcedureType = procedure_details.P
 LIMIT 20;
 
 ## TASK 4 : Same as above, but only on pets from the clinic in question
+SELECT procedure_history.pet_id, procedure_history.ProcedureType, procedure_history.ProcedureSubCode,
+procedure_details.procedure_desc, procedure_details.price FROM procedure_history
+JOIN procedure_details ON (procedure_history.ProcedureType = procedure_details.ProcedureType
+ AND procedure_history.ProcedureSubCode = procedure_details.ProcedureSubCode)
+WHERE procedure_history.pet_id IN (
+	SELECT pet_details.PetID FROM pet_details
+);
+
+## TASK 5 : Extract a table of individual costs incurred by owners of pets. OwnerID and costs should be side by side
+SELECT owner_details.OwnerID, SUM(price) AS TotalCost FROM owner_details
+JOIN pet_details ON owner_details.OwnerID = pet_details.OwnerID
+JOIN procedure_history ON procedure_history.pet_id = pet_details.PetID
+JOIN procedure_details ON (procedure_history.ProcedureType = procedure_details.ProcedureType
+ AND procedure_history.ProcedureSubCode = procedure_details.ProcedureSubCode)
+GROUP BY owner_details.OwnerID
+ORDER by OwnerID;
