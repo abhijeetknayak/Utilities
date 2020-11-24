@@ -6929,7 +6929,7 @@
     "Box office": "$15.1 million",
     "Running Time(Minutes)": 93,
     "Date": "1990-10-03",
-    "budget_numeric": 60000000.0,
+    "budget_numeric": 8700000.0,
     "box_office_numeric": 15100000.0
   },
   {
@@ -13737,7 +13737,7 @@
     "Running Time(Minutes)": 101,
     "Date": "2008-07-19",
     "budget_numeric": null,
-    "box_office_numeric": 203200000.0
+    "box_office_numeric": null
   },
   {
     "Title": "Walt & El Grupo",
@@ -17008,7 +17008,7 @@
     ],
     "Running Time(Minutes)": 161,
     "Date": "2016-12-21",
-    "budget_numeric": 9333333.333333334,
+    "budget_numeric": null,
     "box_office_numeric": null
   },
   {
@@ -17347,8 +17347,8 @@
     "Box office": "833.5 million",
     "Running Time(Minutes)": 162,
     "Date": "2017-07-14",
-    "budget_numeric": 1310000000.0,
-    "box_office_numeric": 833500000.0
+    "budget_numeric": null,
+    "box_office_numeric": null
   },
   {
     "Title": "Coco",
