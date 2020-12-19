@@ -23,4 +23,7 @@ convert.exe in distributions folder - On systems without python ---> convert.exe
   * Make these plots interactive, so that you can check the values for each country individually
   * Compare values of Child mortality and health expenditure percentage. Try to correlate these values
   <img src="https://github.com/abhijeetknayak/Utilities/blob/master/Data-Science/Country-Data/health_expenditure-vs-Child_mortality.png" /> <br>
+  As shown, most of these countries have the same correlation between child mortality and health expenditure. There are a few exceptions though, for example:
+    *  AFG: High Child mortality in-spite of having a higher health expenditure compared to other countries. Maybe because of the war
+    * BRN: Brunei has same child mortality as Bulgaria (BGR), but the expenditure is much lesser. Maybe populations are not comparable
   
