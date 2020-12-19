@@ -22,4 +22,5 @@ convert.exe in distributions folder - On systems without python ---> convert.exe
   * Plot top 40 countries which have highest health expenditure
   * Make these plots interactive, so that you can check the values for each country individually
   * Compare values of Child mortality and health expenditure percentage. Try to correlate these values
+  <img src="https://github.com/abhijeetknayak/Utilities/blob/master/Data-Science/Country-Data/health_expenditure-vs-Child_mortality.png" /> <br>
   
