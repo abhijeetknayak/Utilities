@@ -11,5 +11,15 @@
   * Compare values of Child mortality and health expenditure percentage. Try to correlate these values
   <img src="https://github.com/abhijeetknayak/Utilities/blob/master/Data-Science/Country-Data/health_expenditure-vs-Child_mortality.png" /> <br>
   As shown, most of these countries have the same correlation between child mortality and health expenditure. There are a few exceptions though, for example:
-    *  AFG: High Child mortality in-spite of having a higher health expenditure compared to other countries. Maybe because of the war
+    * AFG: High Child mortality in-spite of having a higher health expenditure compared to other countries. Maybe because of the war
     * BRN: Brunei has same child mortality as Bulgaria (BGR), but the expenditure is much lesser. Maybe populations are not comparable
+  * Comparison of health expenditure and life expectancy values in countries.
+  <img src="https://github.com/abhijeetknayak/Utilities/blob/master/Data-Science/Country-Data/health_expenditure-vs-Life-Expectancy.png" /> <br>
+  As seen in this plot, when we see a peak in the life expectancy, a peak in expenditure follows. There are expections though:
+    * BGD: Spends more than Barbados(BRB), but has a lower life expectancy
+    * BRN: Brunei spends very less on its healthcare, but still has a high life expectancy
+  #### To better visualize this, we sort values for the expenditure variable and check if the two plots have similar slopes
+  <img src="https://github.com/abhijeetknayak/Utilities/blob/master/Data-Science/Country-Data/expenditure-per-capita-vs-Life-Expectancy.png" /> <br>
+  Lots of noise, but the general trend seems to be a negative slope. Thus, in general, we can say that these variables are directly proportional, that is, more the country spend on healthcare, higher the life expectancy is
+  
+  
