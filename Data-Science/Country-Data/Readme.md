@@ -29,3 +29,4 @@
     | Total Expenditure (Billion $) | 5.740888 | 53.955739 | 49.487595 | 193.816072 | 18.830034 | 35.892258 |
     | Expectancy (Years) | 60.176646 | 72.173260 | 77.739869 | 74.345748 | 73.067573 | 73.354333 |         
     | GDP | 1.251546e+05 | 1.290298e+06 | 6.167413e+05 | 1.460748e+06 | 2.336858e+05 | 5.314008e+05 |  
+    Africa has the least per capita expenditure, and hence, the least life expectancy
