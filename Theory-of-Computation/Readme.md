@@ -1,20 +1,17 @@
-###Theory of Computation:
+### Theory of Computation:
 
-Computation problems : Eg. Graph reachability problem
-
-Computational devices : CPU, GPU, calc: What problems can be solved / cannot be solved. Mathematical proofs 
-
+Computational problems : Eg. Graph reachability problem
+Computational devices : CPU, GPU, calc: What problems can be solved / cannot be solved. Mathematical proofs
 Computational model:
 
 Automaton (Singular) - Automata (Plural)
-1. Finite Automata: Finite states/memory ---> Electric switch - finite states
------> Fan regulator --- multiple states, but still finite
+1. Finite Automata: Finite states/memory ---> Electric switch - finite states <br>
+-----> Fan regulator --- multiple states, but still finite <br>
 -----> Strings L = {x | x is binary string div by 4} ---> create finite automata with four states 00, 01, 10, 11
 
 alphabet, language, 
 
-
-Deterministic Finite Automaton (DFA): 5 tuple represented by (Q, Σ, δ, q0, F)
+**Deterministic Finite Automaton (DFA)**: 5 tuple represented by (Q, Σ, δ, q0, F)
  where Q is the set of all possible states
  Σ is the alphabet, δ is the transition function [Q * Σ ----> Q], q0 is the starting state, F is the set of all accept states(from Q)
  
