@@ -26,3 +26,10 @@ Are there languages that are not regular ---> Are there languages that do not ha
 Eg. L = {0^n 1^n | n>= 0} is not regular <br>
 
 Dump state - State from where an automaton cannot reach an accept state
+
+
+
+
+
+* **Non-Regular Languages**: There does not exist an NFA accepting the language.
+  * Pumping Lemma: If L is a regular language, then there exists 'p' >= 0, S.T. for all strings 'w' in L with |w| >= p, there exists a partition w = xyz, s.t. |xy| <= p and |z| > 0, and for all 'i' --> xy<sup>i</sup>z belongs to L
