@@ -54,10 +54,31 @@ and there exists a sequence of states r0r1....rm (may not be distinct) such that
   * r0 = q0 ----> Initial condition
   * ri belongs to δ(ri-1, bi) for all i = 1...m ----> Transition condition
   * rm belongs to F ----> Acceptance Condition
-  * Acceptance of a language L =====> L(N) = {'w' belonging to Σ* | N accepts 'w' }
+  * Acceptance of a language L =====> L(N) = {'w' belonging to Σ* | N accepts 'w' }  
+* Every DFA is also an NFA! They just don't use their non-determinism
+* Construction of DFA from NFA. The number of possible states in the corresponding DFA is higher. There are "Dead states" as well, which cannot be reached from the start state.
+* Regular Operations: Refer video
+* Regular Expressions: R is said to be a regular expression(RE) if it has one of the following forms: Proof by induction
+* GNFA: Generalized NFA - an NFA with transitions marked using Regular Expressions
+  * Without loss of generality we may assume that a GNFA has the following properties:
+    * GNFA has a unique accept state
+    * There are no incoming transitions to the start state and no outgoing transitions from the accept state. Use Epsilon transitions for this purpose
+    * There are transitions from the start state to every other state and from every state to the accept state
+    * There exists a transition from any non-start and non-accept states in the GNFA
 
-
-
-
+Week 3:
+More closure properties of regular languages
+1. Complement of a language
+2. Intersection of languages
+3. Set Difference
+4. Homomorphism - Mapping from an alphabet to a new(or same) alphabet
+5. Reverse of a language - Reverse all strings. The DFA is also reversed. This gives an NFA as the result, with new start and accept states.
+6. Inverse Homomorphism 
 * **Non-Regular Languages**: There does not exist an NFA accepting the language.
   * Pumping Lemma: If L is a regular language, then there exists 'p' >= 0, S.T. for all strings 'w' in L with |w| >= p, there exists a partition w = xyz, s.t. |xy| <= p and |y| > 0, and for all 'i' --> xy<sup>i</sup>z belongs to L  
+  * Pumping Lemma Proof: Refer Video (Using DFA and Pigeonhole Principle)
+* **DFA Minimization**: Constructing equivalent DFAs which are smaller(have a smaller number of states) 
+  * Construct a table of all {p, q} pairs where p and q are valid states in the DFA
+  * Mark a pair {p, q} if p is an accept state and q is not (and vice versa)
+  * Repeat the following until no more pairs can be marked: **Mark** {p, q} if {δ(p, a), δ(q, a)} is marked for some a belonging to the alphabet
+  * Two or more states are equivalent if they are not marked!
