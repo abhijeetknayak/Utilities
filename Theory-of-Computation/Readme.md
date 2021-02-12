@@ -82,3 +82,9 @@ More closure properties of regular languages
   * Mark a pair {p, q} if p is an accept state and q is not (and vice versa)
   * Repeat the following until no more pairs can be marked: **Mark** {p, q} if {δ(p, a), δ(q, a)} is marked for some a belonging to the alphabet
   * Two or more states are equivalent if they are not marked!
+  
+### Context Free Grammars
+* Models that accept regular as well as non-regular languages
+* **Terminal Symbols** (Alphabet), **Variable Symbols** (can be replaced with variables and terminal symbols), **Production Rules** (Rules describing how the variables are replaced), **Start Variable** (Start point of the computation)
+
+
