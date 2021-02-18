@@ -66,7 +66,7 @@ and there exists a sequence of states r0r1....rm (may not be distinct) such that
     * There are transitions from the start state to every other state and from every state to the accept state
     * There exists a transition from any non-start and non-accept states in the GNFA
 
-Week 3:
+#### **Week 3**:
 More closure properties of regular languages
 1. Complement of a language
 2. Intersection of languages
