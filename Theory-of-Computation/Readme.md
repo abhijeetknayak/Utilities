@@ -87,4 +87,6 @@ More closure properties of regular languages
 * Models that accept regular as well as non-regular languages
 * **Terminal Symbols** (Alphabet), **Variable Symbols** (can be replaced with variables and terminal symbols), **Production Rules** (Rules describing how the variables are replaced), **Start Variable** (Start point of the computation)
 
+### **Read Chapter 1 from Sipser**
+
 
