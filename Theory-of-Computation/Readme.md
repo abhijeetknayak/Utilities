@@ -93,6 +93,17 @@ More closure properties of regular languages
   * The language of a context free Grammar G is defined as **L(G) = { w belonging to Σ* | S -->* w }**
   * A language L is said to be a **Context Free Language** if there exists a CFG that accepts the language. That is, **L = L(G)**
   * **Regular Languages are also Context Free**
+### Parse Trees
+* Every internal node is a variable
+* Every leaf node is either a terminal or Epsilon. If it is an epsilon, then it is the only child of its parent
+* If R is an internal node and A1, A2,..., Ak are the children from left to right then R --> A1A2...Ak is a rule in the grammar G
+* Concatenation of the leaves of the parse tree from left to right gives the string w accepted by the grammar G
+* There may exist multiple parsee trees for a string with respect to a Grammar G. There may be grammars that have unique parsee trees for every string in the language
+* **Derivations** are a sequence of substitutions that yields the string w
+  * **Leftmost Derivation**: Derivation in which the leftmost variable is replaced in each step
+  * A string belonging to a language is said to be ambiguous if it has 2 or more leftmost derivations (or if there exists multiple parse trees)
+  * A grammar is ambiguous if there exists atleast one ambiguous string belonging to L(G)
+  * A CFL is inherently ambiguous if all CFGs accepting L are ambiguous
 
 ### **Read Chapter 1 from Sipser**
 
