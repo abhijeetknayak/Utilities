@@ -89,6 +89,10 @@ More closure properties of regular languages
 * **Formal Defintion of a Context Free Grammar**: A CFG is a 4-tuple (V, Σ, P, S), where V is the non-empty set of variables, Σ is the set of terminal symbols, P is a subset of V X {V U Σ}* (production rules), S belonging to V is the start variable
 * **Production Rule Defn**: If A -> W is a production rule and u, v belong to {V U Σ}<sup>*</sup>, then we say that the string uAv yields uWv in one step
 * For u, v belonging to {V U Σ}<sup>*</sup>, we say that u yields v if either u = v or if there exists a sequence of strinfs u0, u1, u2, ..., uK where **u0 = u, uk = v and ui-1 yields ui in one step**
+* **Context Free Languages**:
+  * The language of a context free Grammar G is defined as **L(G) = { w belonging to Σ* | S -->* w }**
+  * A language L is said to be a **Context Free Language** if there exists a CFG that accepts the language. That is, **L = L(G)**
+  * **Regular Languages are also Context Free**
 
 ### **Read Chapter 1 from Sipser**
 
