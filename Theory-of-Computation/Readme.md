@@ -104,7 +104,10 @@ More closure properties of regular languages
   * A string belonging to a language is said to be ambiguous if it has 2 or more leftmost derivations (or if there exists multiple parse trees)
   * A grammar is ambiguous if there exists atleast one ambiguous string belonging to L(G)
   * A CFL is inherently ambiguous if all CFGs accepting L are ambiguous
-
+### Chomsky Normal Form:
+* If all production rules in a CFG is of the form 'A --> XY...' or 'A --> a' where 'A', 'X', 'Y' are variables and 'a' belongs to the alphabet
+* If the start variable is never on the RHS of any production rule
+* The rule 'S --> Epsilon' is available depending on if the Context free Language contains Epsilon (Exception to first point) 
 ### **Read Chapter 1 from Sipser**
 
 
