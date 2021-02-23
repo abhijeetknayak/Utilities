@@ -105,9 +105,11 @@ More closure properties of regular languages
   * A grammar is ambiguous if there exists atleast one ambiguous string belonging to L(G)
   * A CFL is inherently ambiguous if all CFGs accepting L are ambiguous
 ### Chomsky Normal Form:
-* If all production rules in a CFG is of the form 'A --> XY...' or 'A --> a' where 'A', 'X', 'Y' are variables and 'a' belongs to the alphabet
+* If all production rules in a CFG is of the form 'A --> XY' (RHS Two variables) or 'A --> a' (RHS one symbol) where 'A', 'X', 'Y' are variables and 'a' belongs to the alphabet
 * If the start variable is never on the RHS of any production rule
 * The rule 'S --> Epsilon' is available depending on if the Context free Language contains Epsilon (Exception to first point) 
+
+### **Every Context Free Language has a Context Free Grammar that is in the Chomsky Normal Form**
 ### **Read Chapter 1 from Sipser**
 
 
