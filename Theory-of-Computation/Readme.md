@@ -110,6 +110,8 @@ More closure properties of regular languages
 * The rule 'S --> Epsilon' is available depending on if the Context free Language contains Epsilon (Exception to first point) 
 
 ### **Every Context Free Language has a Context Free Grammar that is in the Chomsky Normal Form**
+### Non CFLs and Pumping Lemma:
+
 ### **Read Chapter 1 from Sipser**
 
 
