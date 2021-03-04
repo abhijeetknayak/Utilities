@@ -109,9 +109,10 @@ More closure properties of regular languages
 * If the start variable is never on the RHS of any production rule
 * The rule 'S --> Epsilon' is available depending on if the Context free Language contains Epsilon (Exception to first point) 
 
-### **Every Context Free Language has a Context Free Grammar that is in the Chomsky Normal Form**
+#### **Every Context Free Language has a Context Free Grammar that is in the Chomsky Normal Form**
 ### Non CFLs and Pumping Lemma:
-
+* **Pumping Lemma:** Let L be a CFL, then there exists a 'p' >= 0 such that for all strings 'w' with |w| >=p, there exists a partition w = 'uvxyz', where |vxy| <= p and |vy| > 0, such that for all i >= 0, uv<sup>i</sup>xy<sup>i</sup>z belongs to L
+* Set p = d<sup>|V| + 1</sup>, where V is the number of variables and d is the max number of symbols on the RHS of a production rule
 ### **Read Chapter 1 from Sipser**
 
 
