@@ -118,7 +118,7 @@ More closure properties of regular languages
 * At any point, the NFA is in state 'p' and the top-most element of the stack is 'X'. The stack has its own alphabet --> Called Stack alphabet
 * After reading an input bit, the state transitions to 'q' and the to-most element of the stack can be changed to 'Y' 
 * Formal Definition: A PDA is a 6 Tuple(same as NFA, includes stack alphabet as well), where the transition function is represented by (p, ai, X) --> set of (q, Y). This provides a set of such pairs because of the non-determinism of the NFA
-  * There exists a set of inputs a1 ... am (belonging to alphabet<sup>*</sup>), a set of states r0 ... rm (belonging to Q) and a set of strings s0 ... sm (belonging to stack alphabet<sup>*</sup>) such that w = a1a2...am, r0 = q0, s0 = empty string (start state), rm belongs to F and (r<sub>i</sub>, Y) belongs to δ(r<sub>i - 1</sub>, ai, X), si-1 = Xt and si = Yt, where t belongs to (belonging to stack alphabet<sup>*</sup>)
+  * There exists a set of inputs a1 ... am (belonging to alphabet<sup>* </sup>), a set of states r0 ... rm (belonging to Q) and a set of strings s0 ... sm (belonging to stack alphabet<sup>* </sup>) such that w = a1a2...am, r0 = q0, s0 = empty string (start state), rm belongs to F and (r<sub>i</sub>, Y) belongs to δ(r<sub>i - 1</sub>, ai, X), si-1 = Xt and si = Yt, where t belongs to (belonging to stack alphabet<sup>* </sup>)
 ### **Read Chapter 1 from Sipser**
 
 
